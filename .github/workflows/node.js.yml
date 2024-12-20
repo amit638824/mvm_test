@@ -24,5 +24,4 @@ jobs:
       - run: |
         touch .env
         if [[ -n "${{ secrets.PRO_ENV }}" ]]; then
-          echo "${{ secrets.PRO_ENV }}" >> .env
-        fi  # Optional: Handle missing secret gracefully (e.g., || true)
+          echo "${{ secrets.PRO_ENV }}" >> .env 
