@@ -11,12 +11,10 @@ app.use("/api/uploads", express.static("./src/uploads"));
 /** Error handling */
 app.use((req: Request, res: Response, next: NextFunction) => {
   next();
-}); 
- 
-
+});  
 app.get("/", (req: any, res: any) => {
   // tslint:disable-next-line:no-console
-  res.send(" test Welcome to the server by amit");
+  res.send(" test Welcome to the server motua");
 });
  
 app.get("/test", (req: any, res: any) => {
