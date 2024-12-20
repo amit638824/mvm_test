@@ -3,16 +3,14 @@ name: Node.js CI
 on:
   push:
     branches: [ "main" ]
-   
+
 jobs:
   build:
-
     runs-on: self-hosted
 
     strategy:
       matrix:
         node-version: [22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v4
@@ -23,5 +21,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: |
-        touch .env 
-        echo "${{ secrets.PROD_ENV_FILE }}" > .env
+        printf '%s\n' "${{ secrets.PROD_ENV_FILE }}" > .env
