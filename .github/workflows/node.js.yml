@@ -24,4 +24,5 @@ jobs:
     - run: npm ci
     - run: |
         touch .env
-        echo "${{ secrets.PRO_ENV }}" > .env
+        if [[ -n "${{ secrets.PRO_ENV }}" ]]; then
+          echo "${{ secrets.PRO_ENV }}" >> .env
