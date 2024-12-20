@@ -14,7 +14,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });  
 app.get("/", (req: any, res: any) => {
   // tslint:disable-next-line:no-console
-  res.send(" test Welcome to the server motua");
+  res.send(" test Welcome to the server motua1");
 });
  
 app.get("/test", (req: any, res: any) => {
